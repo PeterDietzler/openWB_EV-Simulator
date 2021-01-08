@@ -4,6 +4,9 @@
 # Wofür?
 Simulation einer EVSE DIN oder anderer Ladepunkte für sofortiges laden, Überwachung der Ladung, PV Überschussladung und Lastmanagement mehrerer WB.
 
+Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
+
+
 
 # Was wird benötigt?
 Hardware:
@@ -11,6 +14,8 @@ Hardware:
 - ESP32, ESP8266
 
 Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
+
+
 
 in der config.h wird der Hostname eingetragen 
 
@@ -66,6 +71,9 @@ IP Hostname oder IP Addresse
 
 - SOC Modul
   http://IP/SoC
+  
+  
+  
 
 ## OpenWB - Einstellungen - Modulkonfiguration - Batteriespeicher
 
