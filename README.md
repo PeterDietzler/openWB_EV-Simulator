@@ -17,13 +17,24 @@ in der config.h wird der Hostname eingetragen
 IP Hostname oder IP Addresse
 
 
-Name          Hostname
-
-Anbindung     HTTP
-
-IP Adresse    http://IP/setcurrent?current=$WERT
 
 ## OpenWB - Einstellungen - Modulkonfiguration - Ladepunkt
+
+
+- Name
+    
+    Hostname
+
+- Anbindung
+
+    HTTP
+
+- IP Adresse
+    
+    IP = Hostname oder IP-Addresse
+    
+    http://IP/setcurrent?current=$WERT
+    
 
 - Ladeleistungmodul HTTP
 
