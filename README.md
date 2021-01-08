@@ -1,5 +1,14 @@
 # openWB_EV-Simulator
-Hardware: ESP32, ESP8266
+
+
+# Wofür?
+Simulation einer EVSE DIN oder anderer Ladepunkte für sofortiges laden, Überwachung der Ladung, PV Überschussladung und Lastmanagement mehrerer WB.
+
+
+# Was wird benötigt?
+Hardware:
+
+- ESP32, ESP8266
 
 Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
 
