@@ -23,36 +23,32 @@ Anbindung     HTTP
 
 IP Adresse    http://IP/setcurrent?current=$WERT
 
-# OpenWB Einstellungen
+## OpenWB - Einstellungen - Modulkonfiguration - Ladepunkt
 
-## Modulkonfiguration Ladepunkt
+- Ladeleistungmodul HTTP
 
-Ladeleistungmodul HTTP
-
-URL Ladeleistung in Watt
-http://IP/Ladeleistung
+- URL Ladeleistung in Watt    http://IP/Ladeleistung
 
 
-URL Zählerstand in kWh
-http://IP/LadeZaehlerKWh
+- URL Zählerstand in kWh        http://IP/LadeZaehlerKWh
 
 
-URL Stromstärke Phase 1-3
+- URL Stromstärke Phase 1-3
+
 http://IP/LadeStromL1
 http://IP/LadeStromL1
 http://IP/LadeStromL1
 
 
-IP Adresse Plug/Charge Status
+- IP Adresse Plug/Charge Status
 http://IP/plugstat
 http://IP/chargestat
 
 
-SOC Modul
+- SOC Modul
 http://IP/SoC
 
-
-## Modulkonfiguration Batteriespeicher
+## OpenWB - Einstellungen - Modulkonfiguration - Batteriespeicher
 
 
 
