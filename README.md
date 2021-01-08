@@ -9,9 +9,10 @@ IP Hostname oder IP Addresse
 
 
 Name          Hostname
+
 Anbindung     HTTP
-IP Adresse
-http://IP/setcurrent?current=$WERT
+
+IP Adresse    http://IP/setcurrent?current=$WERT
 
 
 
