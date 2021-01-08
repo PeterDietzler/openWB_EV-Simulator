@@ -28,49 +28,51 @@ IP Hostname oder IP Addresse
 
 - Name
     
-    Hostname
+        Hostname
 
 - Anbindung
 
-    HTTP
+         HTTP
 
 - IP Adresse
     
-    IP = Hostname oder IP-Addresse
+        IP = Hostname oder IP-Addresse
     
-    http://IP/setcurrent?current=$WERT
+        http://IP/setcurrent?current=$WERT
     
 
-- Ladeleistungmodul HTTP
+- Ladeleistungmodul 
+        
+        HTTP
 
 - URL Ladeleistung in Watt    
 
-    http://IP/Ladeleistung
+        http://IP/Ladeleistung
 
 
 - URL Zählerstand in kWh       
 
-    http://IP/LadeZaehlerKWh
+        http://IP/LadeZaehlerKWh
 
 
 - URL Stromstärke Phase 1-3
 
-  http://IP/LadeStromL1
+        http://IP/LadeStromL1
 
-  http://IP/LadeStromL1
+        http://IP/LadeStromL1
 
-  http://IP/LadeStromL1
+        http://IP/LadeStromL1
 
 
 - IP Adresse Plug/Charge Status
 
-  http://IP/plugstat
+        http://IP/plugstat
 
-  http://IP/chargestat
+        http://IP/chargestat
 
 
 - SOC Modul
-  http://IP/SoC
+        http://IP/SoC
   
   
   
@@ -80,15 +82,15 @@ IP Hostname oder IP Addresse
 
 - Speicher-Modul
     
-    HTTP Abfrage
+        HTTP Abfrage
     
 - Leistung URL
 
-    http://IP/Ladeleistung
+        http://IP/Ladeleistung
 
 - SoC URL
   
-  http://IP/SoC
+        http://IP/SoC
 
 
 
