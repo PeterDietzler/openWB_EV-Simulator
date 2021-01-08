@@ -1,12 +1,27 @@
 // ESP32 Lite Pack Library -
 
+#include "config.h"
 
 
-#include "hardware.h"
+
+/*********************************************************************/
+// Global Variables
+/*********************************************************************/
+#define VERSION "0.1.0 openWB_EV-Simulator"
 
 
-#define ESP32     
-//#define ESP8266   1
+
+
+
+
+
+
+
+
+
+
+
+
 
 #ifdef ESP32 
 #include <WiFi.h>
@@ -24,11 +39,13 @@ Adafruit_PWMServoDriver pwm1 = Adafruit_PWMServoDriver(0x40);
 
 
 
-#ifdef ESP8266 
+#ifdef ESP8266 == true
 #include <ESP8266WiFi.h>
 
 // Potentiometer is connected to GPIO 34 (Analog ADC1_CH6) 
 const int potPin = A0;
+
+
 const char* Hostname = "VW-ID-3";
 
 #endif
