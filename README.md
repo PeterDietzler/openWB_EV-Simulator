@@ -23,7 +23,9 @@ Anbindung     HTTP
 
 IP Adresse    http://IP/setcurrent?current=$WERT
 
+# OpenWB Einstellungen
 
+## Modulkonfiguration Ladepunkt
 
 Ladeleistungmodul HTTP
 
@@ -50,8 +52,8 @@ SOC Modul
 http://IP/SoC
 
 
+## Modulkonfiguration Batteriespeicher
 
-Modulkonfiguration Batteriespeicher
 
 
 
