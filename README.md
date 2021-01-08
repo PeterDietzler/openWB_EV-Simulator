@@ -59,7 +59,17 @@ IP Adresse    http://IP/setcurrent?current=$WERT
 ## OpenWB - Einstellungen - Modulkonfiguration - Batteriespeicher
 
 
+- Speicher-Modul
+    
+    HTTP Abfrage
+    
+- Leistung URL
 
+    http://IP/Ladeleistung
+
+- SoC URL
+  
+  http://IP/SoC
 
 
 
