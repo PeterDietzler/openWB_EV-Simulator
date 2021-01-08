@@ -3,6 +3,25 @@ Hardware: ESP32, ESP8266
 
 Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
 
+in der config.h wird der Hostname eingetragen 
+
+IP Hostname oder IP Addresse
+
+http://IP/setcurrent?current=$WERT
+http://IP/Ladeleistung
+http://IP/LadeZaehlerKWh
+
+
+http://IP/LadeStromL1
+http://IP/LadeStromL1
+http://IP/LadeStromL1
+
+
+http://IP/plugstat
+http://IP/chargestat
+
+http://IP/SoC
+
 
 Der Ampere sollwert wird an http://$IP/setcurrent?current=$WERT gesendet. 
 Für eine korrekte Funktion ist als Ladeleistungsmodul HTTP zu wählen. 
