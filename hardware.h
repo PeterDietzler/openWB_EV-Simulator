@@ -3,19 +3,15 @@
 #define _HARDWARE_h
 
 
-#include "Pangodream_18650_CL.h"
-
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
+#include "Pangodream_18650_CL.h"
 
 
-
-#define ADS1015_I2C_ADR
-
-
-
+extern Adafruit_PWMServoDriver pwm1;
 
 
 
 
-#endif
+
+#endif // _HARDWARE_h

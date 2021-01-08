@@ -4,8 +4,8 @@
 
 
 
-#define ESP32 true
-#define ESP8266 false
+//#define ESP32 true
+#define ESP8266 true
 
 
 
@@ -33,4 +33,4 @@
 
 
 
-#endif //#ifndef _CONFIG_h
+#endif // _CONFIG_h

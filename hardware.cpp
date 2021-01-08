@@ -3,11 +3,6 @@
 #include "hardware.h"
 #include "config.h"
 
-
-
-
-
-
 #define IOREF 3.3   // I/O reference voltage 
 
 // ------ pins---------------------------------------
@@ -17,8 +12,18 @@
 #define pinMotorLeftSense A1       // M1_FB  left motor current sense
 #define pinMotorLeftFault 25       // M1_SF  left motor fault
 
+
+#define ADS1015_I2C_ADR
+
+Adafruit_PWMServoDriver pwm1 = Adafruit_PWMServoDriver(0x40);
+
+
+
+
+
 void HardwareSetup()
 {
+
 
 
 }

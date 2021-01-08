@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include <Adafruit_ADS1015.h>
 
-#include "hardware.h"
+//#include "hardware.h"
 
 Adafruit_ADS1115 ads( 0x48);  //ADS1015_I2C_ADR);
 

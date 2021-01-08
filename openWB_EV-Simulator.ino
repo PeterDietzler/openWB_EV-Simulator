@@ -1,5 +1,6 @@
 // ESP32 Lite Pack Library -
 
+#include "hardware.h"
 #include "config.h"
 
 
@@ -11,42 +12,20 @@
 
 
 
+#ifdef ESP32 == true
 
-
-
-
-
-
-
-
-
-
-
-
-#ifdef ESP32 
 #include <WiFi.h>
-
 // Potentiometer is connected to GPIO 34 (Analog ADC1_CH6) 
 const int potPin = 34;
-
-const char* Hostname = "SuperSoco";
-//const char* Hostname = "TeslaModel-3";
- 
-Adafruit_PWMServoDriver pwm1 = Adafruit_PWMServoDriver(0x40);
-
-
 #endif
 
 
 
 #ifdef ESP8266 == true
-#include <ESP8266WiFi.h>
 
+#include <ESP8266WiFi.h>
 // Potentiometer is connected to GPIO 34 (Analog ADC1_CH6) 
 const int potPin = A0;
-
-
-const char* Hostname = "VW-ID-3";
 
 #endif
 
@@ -58,6 +37,9 @@ Pangodream_18650_CL BL( 34, 1.0);
 const char* ssid = "FRITZ!Box 7590 GM";
 const char* password = "57943311541073535284";
 
+//const char* Hostname = "SuperSoco";
+const char* Hostname = "VW-ID-3";
+//const char* Hostname = "TeslaModel-3";
 
 
 // Set web server port number to 80
@@ -65,38 +47,17 @@ WiFiServer server(80);
 
 
 // variable for storing the potentiometer value
-int potValue = 0;
-
-long previousMillis = 0;
-long interval = 5*1000;
-
-long LadeZaelerZeit = 0;
-long previousLadeZaelerMillis = 0;
-
-
-double LadeZaelerKWh = 0.0;
-
-
-long chageCurrent=0.0;
-
-
-
-
-
+int     potValue = 0;
+long    previousMillis = 0;
+long    interval = 5*1000;
+long    LadeZaelerZeit = 0;
+long    previousLadeZaelerMillis = 0;
+double  LadeZaelerKWh = 0.0;
+long    chageCurrent=0.0;
 
 // Variable to store the HTTP request
 String header;
-
-// Auxiliar variables to store the current output state
-String output26State = "off";
-String output27State = "off";
-
 String result = "";
-
-// Variables to be exposed to the API
-int temperature;
-int humidity;
-
 
 
 // Assign output variables to GPIO pins
@@ -113,46 +74,31 @@ const long timeoutTime = 2000;
 
 
 
-
-
-
-
-
-
-
 void myCodeSetup()
 {
 
   Serial.begin(115200);
-  // Initialize the output variables as outputs
-  pinMode(output26, OUTPUT);
-  pinMode(output27, OUTPUT);
-  // Set outputs to LOW
-  digitalWrite(output26, LOW);
-  digitalWrite(output27, LOW);
 
   // Connect to Wi-Fi network with SSID and password
   Serial.print("Connecting to ");
   Serial.println(ssid);
 
-#ifdef ESP32  
+#ifdef ESP32 == true  
  WiFi.setHostname( Hostname );
-  WiFi.begin(ssid, password);
+ WiFi.begin(ssid, password);
 #endif
 
-#ifdef ESP8266  
+#ifdef ESP8266 == true 
   WiFi.begin((char*)ssid, (char*)password);
   WiFi.hostname( Hostname );
 #endif
 
-  WiFi.begin((char*)ssid, (char*)password);
-  
+//  WiFi.begin((char*)ssid, (char*)password);
 
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
   }
-//WiFi.hostname("WebPool");
   
   // Print local IP address and start web server
   Serial.println("");
@@ -160,9 +106,6 @@ void myCodeSetup()
   Serial.println("IP address: ");
   Serial.println(WiFi.localIP());
   server.begin();
-
-
-
 }
 
 
