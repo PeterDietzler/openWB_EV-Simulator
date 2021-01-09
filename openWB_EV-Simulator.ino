@@ -126,6 +126,10 @@ String getAkkuSoC()
   return "51";  
 }
 
+String getBatSoC()
+{
+  return "61";  
+}
 
 String  getLadeleistung()
 {
@@ -203,19 +207,18 @@ void  sendNumber()
               } else if (header.indexOf("GET /SoC") >= 0) {
                 result = getAkkuSoC();
                 Serial.println("SoC = " + result + " %" );
+ 
+              } else if (header.indexOf("GET /socBat") >= 0) {
+                result = getBatSoC();
+                Serial.println("socBat = " + result + " %" );
                
               } else if ( header.indexOf("GET /setcurrent?current=") >= 0) {
                 int pos = header.indexOf('='); //finds location of first =
                 Serial.print("pos = " );
                 Serial.println( pos );
-
                 result = header.substring(pos+1);   //captures first data String
-
                 chageCurrent = result.toInt();
-               
-               if( chageCurrent > 6.5) chageCurrent = 6.5;
-                
-
+                if( chageCurrent > 6.5) chageCurrent = 6.5;
                 Serial.print("Value = " );
                 Serial.println( chageCurrent );
                 
@@ -229,8 +232,6 @@ void  sendNumber()
               } else if (header.indexOf("/LadeZaehlerKWh") >= 0) {
                 result = getLadeZaelerKWh();
                 Serial.println("LadeZaelerKWh = " + result +"KWh Zeit:" + LadeZaelerZeit );
-
-
               
               } else if (header.indexOf("/LadeStromL1") >= 0) {
                 result = getLadeStromL1();
@@ -266,7 +267,9 @@ void  sendNumber()
     header = "";
     // Close the connection
     client.stop();
-    Serial.println("Client disconnected.");
+   // Serial.println("Client disconnected.");
+    Serial.println("");
+
   }
 
   

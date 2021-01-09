@@ -4,9 +4,22 @@
 # Wofür?
 Simulation einer EVSE DIN oder anderer Ladepunkte für sofortiges laden, Überwachung der Ladung, PV Überschussladung und Lastmanagement mehrerer WB.
 
-Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
+Die Software simulirt eine Fharzeug am "Ladepunkt" und ein "Batteriespeicher".
 
-Damit wird ein Bidirektional Fahrzeig realisiert. 
+Damit wird ein Bidirektional Ladendes Fahrzeug realisiert. 
+
+# Funktionsweise?
+
+Der ESPxx wird über WLAN mit openWB verbunden und wird als ein Fahrzeug an einem Ladepunkt interpretiert.
+Gleichzeitig wird die Batterie des Fahrzeuges als Haus-Batteriespeicher eingebunden.
+
+
+Über einen Analogen Engang am ESPxx wird die Batterie Spannung gemessen und der "State of Charge" SoC ermittelt.
+Der SoC ist für das Fahrzeug und den Batteriespeicher der selbe.
+ 
+
+
+
 
 
 
