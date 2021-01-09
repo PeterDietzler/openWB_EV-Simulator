@@ -6,20 +6,28 @@ Simulation einer EVSE DIN oder anderer Ladepunkte für sofortiges laden, Überwa
 
 Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
 
+Damit wird ein Bidirektional Fahrzeig realisiert. 
+
 
 
 # Was wird benötigt?
 Hardware:
 
 - ESP32, ESP8266
+- ADS1115
+- I2C PWM Modul
+    ServoMotor für Akku Ladestrom Regler (optional Digital-Analogwandler)
+    ServoMotor für Akku Wechslrichter   (optional Digital-Analogwandler)
 
-Die Software simulirt eine "Ladepunkt" und ein "Batteriespeicher" der openWB Wahlbox.
+Software:
+Die openWB-Software steuert den EV-Simulator per GET Requests:
+
+In der den openWB Einstellungen - Modulkonfiguration sinde folgende Punkte zu konfigurieren:
+    - Ladepunkt
+    - Batteriespeicher
 
 
 
-in der config.h wird der Hostname eingetragen 
-
-IP Hostname oder IP Addresse
 
 
 
